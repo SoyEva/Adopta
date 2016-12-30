@@ -1,0 +1,46 @@
+
+article {
+  display: flex;
+  border-bottom: 1px solid #829DA6;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#acceso {
+  background-color: white;
+  padding: 1em;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  list-style: none;
+}
+.titulo{
+  text-align: center;
+  padding-top: 1em;
+}
+.descripcion{
+  display:flex;
+  align-items:flex-start;
+  justify-content: space-around;
+}
+.animales{
+  width: 50%;
+  padding: 1em;
+}
+.animal{
+  padding: 1em;
+  background-color: white;
+  display:flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.datos p{
+  padding-right: 2em;
+}
+aside{
+  padding: 1em;
+}
+.logo{
+  margin-top: 0.5em;
+}

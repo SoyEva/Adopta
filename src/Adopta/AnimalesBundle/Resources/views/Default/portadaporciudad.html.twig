@@ -1,0 +1,60 @@
+{% extends '::frontend.html.twig' %}
+{% block title %}Adopta un amigo{% endblock %}
+{% block id 'portada' %}
+
+{% block titulo %} 
+{% if animales is empty %}
+<h1 class="titulo">No hay animales en adopción en {{titulo|capitalize}}</h1>
+{% else %}
+<h1 class="titulo">Animales en adopción en {{titulo|capitalize}}</h1>
+{% endif %}
+{% endblock %} 
+
+{% block article %} 
+<section class="descripcion">
+	<section class="animales">
+	
+		    {% for animales in animales %}
+		    {% if animales.tipo == 'gato' %}
+		    <h1>GATOS</h1>
+		    <div class="animal">
+			    <section class="datos">
+				    <p><span>Nombre: {{ animales.nombre}},</span>
+			    	<span>{{ animales.edad|e }}</span></p>
+				    <p>Descripción:{{ animales.descripcion }}</p>
+				    <p>Asociación: <a href="{{ path('asociacion_portada', {'asociacion':
+animales.asociacion.slug}) }}">{{ animales.asociacion.nombre }}</a></p>
+				    <p><a class="boton" href="#">Más información</a></p>
+			    </section>
+				<section class="imagen">
+					<img alt="Fotografía del animal" src="{{ asset('uploads/images/' ~animales.rutaFoto) }}">
+				</section>
+			</div>
+			{% endif %} 
+			{% endfor %} 
+	</section>
+	<section class="animales">
+
+	    {% for animales in animales %}
+	    {% if animales.tipo == 'perro' %}
+	    <h1>PERROS</h1>
+	    <div class="animal">
+	    	<section class="datos">
+			    <p><span>Nombre: {{ animales.nombre}},</span>
+			    <span>{{ animales.edad|e }}</span></p>
+			    <p>Descripción:{{ animales.descripcion }}</p>
+				<p>Asociación:<a href="{{ path('asociacion_portada', {'asociacion':
+animales.asociacion.slug}) }}">{{ animales.asociacion.nombre }}</a></p>
+			    <p><a class="boton" href="#">Más información</a></p>
+			</section>
+			<section class="imagen">
+				<img alt="Fotografía del animal" src="{{ asset('uploads/images/' ~animales.rutaFoto) }}">	
+			</section>
+		</div>
+	    {% endif %}
+	    {% endfor %}		
+	</section>
+</section>
+
+{% endblock %}
+

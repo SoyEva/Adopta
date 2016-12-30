@@ -1,0 +1,47 @@
+
+{% extends '::base.html.twig' %}
+{% block stylesheets %}
+	<link href="{{ asset('bundles/animales/css/normalize.css') }}"
+	rel="stylesheet" type="text/css" />
+	<link href="{{ asset('bundles/animales/css/comun.css') }}"
+	rel="stylesheet" type="text/css" />
+	<link href="{{ asset('bundles/animales/css/frontend.css') }}"
+	rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+
+{% block body %}
+
+<header>
+<h1><a id="titulo" href="{{ path('portada') }}">ADOPTA UN AMIGO</a></h1>
+<nav>
+	<ul>
+		<li><a href="{{ path('portada') }}">Quienes somos</a></li>
+		<li><a href="#">Proyecto</a></li>
+	</ul>
+</nav>
+</header>
+
+<main>
+{% block registro %} 
+<section id="acceso">
+	<section id="registro"><span>Si eres una protectora </span><a href="#">Regístrate</a></section>
+	<section>{% block titulo %} {% endblock %}</section>
+	<section>
+	</section>
+	<section id="login"><a href="#">login</a></section>
+</section>
+{% endblock %}
+
+<article>
+{% block article %}{% endblock %}
+</article>
+<aside>
+{% block aside %} 
+
+{% endblock %}	
+</aside>
+</main>
+{% endblock %}

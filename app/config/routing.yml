@@ -1,0 +1,24 @@
+asociacion:
+    resource: "@AsociacionBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ciudad:
+    resource: "@CiudadBundle/Resources/config/routing.yml"
+    prefix:   /
+
+animales:
+    resource: "@AnimalesBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pagina_estatica:
+  path: /sitio/{pagina}/
+  defaults: { _controller: AnimalesBundle:Sitio:estatica }
+
+portada:
+   path:   /
+   defaults: { _controller: AnimalesBundle:Default:portada }
+
+portada_ciudad:
+   path:   /{ciudad}
+   defaults: { _controller: AnimalesBundle:Default:ciudad, ciudad:null}
+

@@ -1,0 +1,11 @@
+{% extends '::frontend.html.twig' %}
+{% block article %} 
+
+ <section class="datos">
+ <img class="logo" alt="Logotipo de la asociacion" src="{{ asset('uploads/images/' ~asociacion.rutaLogo) }}">
+ 	<p><span>Nombre: {{asociacion.nombre}}</span></p>
+	<p>Descripción:{{ asociacion.descripcion }}</p>
+	<p><span>Contacto: {{asociacion.email}}</span></p>
+</section>
+
+{% endblock %}

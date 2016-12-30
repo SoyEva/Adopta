@@ -1,0 +1,7 @@
+asociacion_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AsociacionBundle:Default:index }
+
+asociacion_portada:
+  path:  /portada/{asociacion}
+  defaults: { _controller: AsociacionBundle:Default:portada }

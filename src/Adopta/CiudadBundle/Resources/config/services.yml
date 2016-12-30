@@ -1,0 +1,4 @@
+services:
+#    ciudad.example:
+#        class: Adopta\CiudadBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
